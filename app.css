@@ -1,0 +1,119 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: lightgray;
+}
+
+.accordion,
+.accordion-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.accordion-panel {
+  padding: 10px;
+  width: 20%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.accordion-start,
+.accordion-center,
+.accordion-end,
+.span-label-value {
+  font-weight: 800;
+}
+
+.accordion-start,
+.accordion-center {
+  border-left: 1px solid black;
+}
+
+.accordion-center,
+.accordion-end {
+  border-right: 1px solid black;
+}
+
+.accordion-text-body {
+  padding: 3%;
+}
+
+.accordion-text {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+.active {
+  background-color: darkslategray;
+  color: white;
+}
+
+.active-panel {
+  display: flex;
+}
+
+.materials-panel {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.materials-span {
+  padding: 20px;
+}
+
+.materials-span-label,
+.materials-span-value {
+  display: block;
+}
+
+.materials-span-label {
+  font-size: 20px;
+}
+
+.plus-minus-symbol {
+  display: none;
+}
+
+/* on mobile/smaller displays */
+
+@media screen and (max-width: 766px) {
+  .accordion {
+    flex-direction: column;
+  }
+  .accordion-panel {
+    width: 50vw;
+    justify-content: flex-start;
+    max-height: 20px;
+  }
+  .accordion-start,
+  .accordion-center {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .accordion-start,
+  .accordion-end {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+  }
+  .accordion-text-body {
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+  .plus-minus-symbol {
+    margin-right: 5px;
+    margin-left: auto;
+    display: flex;
+    font-weight: 800;
+  }
+  .active {
+    background-color: darkslategray;
+    color: white;
+  }
+}

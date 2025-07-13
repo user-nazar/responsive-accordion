@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./app.css" />
+    <title>Responsive Accordion Component</title>
+  </head>
+  <body>
+    <div class="accordion">
+      <div
+        class="accordion-panel accordion-start active"
+        onClick="changePanel(event, 'fit-guide')"
+      >
+        DESCRIPTION
+        <p class="plus-minus-symbol">-</p>
+      </div>
+      <div
+        class="accordion-panel accordion-center"
+        onClick="changePanel(event, 'care-guide')"
+      >
+        CODE
+        <p class="plus-minus-symbol">+</p>
+      </div>
+      <div
+        class="accordion-panel accordion-end"
+        onClick="changePanel(event, 'materials-guide')"
+      >
+        BREAKDOWN
+        <p class="plus-minus-symbol">+</p>
+      </div>
+    </div>
+
+    <div class="accordion-text-body">
+      <div class="accordion-text active-panel" id="fit-guide">
+        This is a simple, responsive component built with HTML, CSS, and vanilla
+        JavaScript. With a max-width viewport over 767px the component will
+        display as a tabbed/nav element, whereas it will collapse to an
+        accordion-style element on smaller screens (narrow or expand your
+        browser window to view the transition).
+      </div>
+      <div class="accordion-text" id="care-guide">
+        <div>
+          No libraries, CDNs, or third-party code involved here beyond the
+          Google font. If you're looking for a similar component built in a
+          similar way (sans outside resources) feel free to snag the <a href="https://github.com/marcusmcb/responsive-accordion" target='_blank'
+          rel='noreferrer'">code</a> and
+          modify it as you see fit.
+        </div>
+      </div>
+      <div class="accordion-text" id="materials-guide">
+        <div>
+          <div class="materials-panel">
+            <span class="materials-span">
+              <span class="materials-span-value">63.5%</span>
+              <span class="materials-span-label">HTML</span>
+            </span>
+            <span class="materials-span">
+              <span class="materials-span-value">29%</span>
+              <span class="materials-span-label">CSS</span>
+              <hr />
+            </span>
+            <span class="materials-span">
+              <span class="materials-span-value">7.5%</span>
+              <span class="materials-span-label">JavaScript</span>
+            </span>
+          </div>
+          Here's the code breakdown for this particular component according to
+          GitHub. The CSS is doing most of the work with an assist from the
+          click handler in the JavaScript file. Adding a few transitions to the
+          CSS would really make this shine and I might revisit this component
+          later to add them. In the meantime, feel free to snag the code as it
+          sits if you're looking for a similar element for your front-end.
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
